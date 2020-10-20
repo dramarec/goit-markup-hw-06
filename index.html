@@ -69,12 +69,55 @@
         </div>
         <div class="backdrop is-hidden" data-modal>
           <div class="modal">
-            <button class="close" data-modal-close>
-              <svg class="icon-vector">
-                <use href="./svg/symbol-defs.svg#icon-vector"></use>
-              </svg>
-            </button>
-            
+            <form class="form" autocomplete="off">
+              <button class="close-btn" data-modal-close>
+                <svg class="icon-close">
+                  <use href="./svg/symbol-defs.svg#icon-close"></use>
+                </svg>
+              </button>
+              <p class="form-data">Оставьте свои данные, мы вам перезвоним</p> 
+              <div class="form-group">
+                <label for="name">Имя</label>
+                <svg class="icon-person">
+                  <use href="./svg/symbol-defs.svg#icon-person">
+                  </use>
+                </svg>
+                <input class="input" type="text" name="name" id="name">
+              </div>
+
+              <div class="form-group">
+                <label for="tel">Телефон</label>
+                <svg class="icon-phone">
+                  <use href="./svg/symbol-defs.svg#icon-phone">
+                  </use>
+                </svg>
+                <input class="input" type="tel" name="tel" id="tel">
+              </div>
+
+              <div class="form-group">
+                <label for="mail">Почта</label>
+                <svg class="icon-email">
+                  <use href="./svg/symbol-defs.svg#icon-email">
+                  </use>
+                </svg>
+                <input class="input" type="email" name="mail" id="mail">
+              </div>
+
+              <div class="form-group">
+                <label for="comment">Комментарий</label>
+                <textarea class="textarea" name="comment" id="comment" cols="1" rows="6" placeholder="Введите текст"></textarea>
+              </div>
+
+              <div class="checkbox">
+                <input type="checkbox" name="ok" value="ok" id="ok">
+                <svg class="icon-check">
+                  <use href="./svg/symbol-defs.svg#icon-check">
+                  </use>
+                </svg>
+                <label class="checkbox" for="ok">Соглашаюсь с рассылкой и принимаю <a class="checkbox-link" href="">Условия договора</a></label>
+              <button class="modal-btn" type="submit">Отправить</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -505,6 +548,17 @@
               </a>
             </li>
           </ul>
+        </div>
+        <div class="conteiner-subscribe">
+          <label class="subscribe" for="subscribe">Подпишитесь на рассылку</label>
+          <input class="input" type="text" name="subscribe" id="subscribe" placeholder="E-mail">
+        </div>
+        <div class="footer-modal-btn">
+        <button class="modal-btn" type="submit">Подписаться</button>
+          <svg class="icon-send">
+            <use href="./svg/symbol-defs.svg#icon-send">
+            </use>
+          </svg>
         </div>
       </div>
     </footer>

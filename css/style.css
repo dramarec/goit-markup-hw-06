@@ -236,7 +236,7 @@ footer .logo {
 	cursor: pointer;
 }
 
-/* modal window */
+/* open modal window */
 .backdrop {
 	position: fixed;
 	top: 0;
@@ -262,15 +262,20 @@ footer .logo {
 	top: 50%;
 	left: 50%;
 
-	min-width: 528px;
+	width: 528px;
 	min-height: 581px;
-	padding: 15px;
+	padding: 40px;
+
+	background: #ffffff;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+
 	transform: translate(-50%, -50%) scale(1);
 	transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 	background-color: #fff;
 }
-.close {
+.close-btn {
 	position: absolute;
 	top: 8px;
 	right: 8px;
@@ -283,13 +288,108 @@ footer .logo {
 	cursor: pointer;
 }
 
-.icon-vector {
-	/* position: absolute;
-	top: 14px;
-	right: 14px; */
-
+.icon-close {
 	width: 11px;
 	height: 11px;
+}
+.icon-close:hover {
+	fill: var(--accent-color);
+}
+.form-data {
+	display: inline-block;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 23px;
+	letter-spacing: 0.03em;
+	width: 448px;
+	margin-bottom: 30px;
+
+	color: #212121;
+}
+
+/* form */
+
+.form-group {
+	/* outline: 1px solid red; */
+	display: flex;
+	flex-direction: column;
+
+	font-size: 12px;
+	line-height: 14px;
+
+	letter-spacing: 0.01em;
+
+	margin-bottom: 28px;
+}
+
+.form-group label {
+	text-align: left;
+	margin-bottom: 4px;
+}
+.form-group input {
+	width: 448px;
+	height: 40px;
+	margin: 0;
+	padding: 12px 15px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	/* box-sizing: border-box; */
+	border-radius: 4px;
+}
+
+.form-group .textarea:hover,
+.form-group .textarea:focus,
+.form-group input:focus,
+.form-group input:hover {
+	border-color: var(--accent-color);
+}
+.icon-person {
+	width: 12px;
+	height: 12px;
+}
+.icon-phone {
+	width: 13px;
+	height: 13px;
+}
+.icon-email {
+	width: 15px;
+	height: 12px;
+}
+.icon-check {
+	width: 16px;
+	height: 15px;
+	background-color: var(--accent-color);
+	fill: var(--accent-color);
+}
+.form-group .textarea {
+	resize: none;
+	margin: 0;
+
+	padding: 12px 16px;
+
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+}
+.form-group .textarea::placeholder {
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.01em;
+
+	color: rgba(117, 117, 117, 0.5);
+}
+
+.checkbox {
+	display: inline-block;
+	font-size: 14px;
+	line-height: 24px;
+	letter-spacing: 0.03em;
+	margin-bottom: 30px;
+}
+.checkbox-link {
+	color: var(--accent-color);
+}
+.checkbox input[type="checkbox"] {
+	/* width: 40px;
+	height: 40px; */
 }
 
 /* ========== Особенности-features ========== */
@@ -307,26 +407,6 @@ footer .logo {
 	width: 70px;
 	height: 70px;
 }
-
-/* .icon-antenna::before {
-	background-image: url(../svg/group/antenna.svg);
-	background-size: 65px;
-}
-
-.icon-clock::before {
-	background-image: url(../svg/group/clock.svg);
-	background-size: 67px;
-}
-
-.icon-diagram::before {
-	background-image: url(../svg/group/diagram.svg);
-	background-size: 70px;
-}
-
-.icon-astronaut::before {
-	background-image: url(../svg/group/astronaut.svg);
-	background-size: 70px;
-} */
 
 .features {
 	padding-top: 94px;
@@ -382,7 +462,7 @@ footer .logo {
 	position: relative;
 }
 
-.engage-pic:before {
+.engage-pic::before {
 	display: inline-block;
 	content: "";
 	position: absolute;
@@ -723,6 +803,7 @@ footer .logo {
 .footer .conteiner {
 	display: flex;
 	align-items: baseline;
+	position: relative;
 }
 .conteiner-contact {
 	margin-right: 70px;
@@ -743,6 +824,9 @@ footer .logo {
 }
 
 /* footer social link */
+.conteiner-bottom {
+	margin-right: 93px;
+}
 
 .join {
 	display: block;
@@ -782,4 +866,61 @@ footer .logo {
 .footer-icon {
 	width: 20px;
 	height: 20px;
+}
+
+.conteiner-subscribe {
+	display: flex;
+	flex-direction: column;
+}
+
+.subscribe {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 16px;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
+
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+
+.conteiner-subscribe .input {
+	display: inline-block;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+
+	width: 358px;
+	height: 50px;
+	padding: 15px 16px;
+	letter-spacing: 0.03em;
+	background-color: #2f303a;
+
+	color: rgba(255, 255, 255, 0.6);
+
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	box-sizing: border-box;
+	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+	border-radius: 4px;
+}
+
+.footer-modal-btn {
+	/* position: absolute; */
+	position: relative;
+	top: 40px;
+	right: 23px;
+	display: flex;
+	align-items: center;
+}
+
+.footer .modal-btn::after {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+.icon-send {
+	width: 24px;
+	height: 24px;
 }

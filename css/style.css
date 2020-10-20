@@ -409,11 +409,14 @@ footer .logo {
 	letter-spacing: 0.01em;
 	color: rgba(117, 117, 117, 0.5);
 }
-
+.form-group.area {
+	margin-bottom: 20px;
+}
 /* checkbox */
 
 .label-checkbox {
 	display: inline-block;
+	position: relative;
 	font-size: 14px;
 	line-height: 24px;
 	letter-spacing: 0.03em;
@@ -424,10 +427,21 @@ footer .logo {
 }
 
 .checkbox {
-	-webkit-appearance: none;
+	/* -webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	position: absolute; */
+
 	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	border: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
+	white-space: nowrap;
+	clip-path: inset(100%);
 }
 
 .checkbox:checked + .icon-check {
@@ -440,11 +454,13 @@ footer .logo {
 
 .icon-check {
 	display: inline-block;
+	/* align-items: center; */
 	width: 16px;
 	height: 15px;
 	background-origin: content-box;
 	border: 2px solid black;
 	border-radius: 4px;
+	margin-right: 7px;
 }
 
 /* ========== Особенности-features ========== */
@@ -926,6 +942,7 @@ footer .logo {
 .conteiner-subscribe {
 	display: flex;
 	flex-direction: column;
+	margin-right: 10px;
 }
 
 .subscribe {
@@ -962,22 +979,21 @@ footer .logo {
 }
 
 .footer-modal-btn {
-	/* position: absolute; */
 	position: relative;
-	top: 40px;
-	right: 23px;
-	display: flex;
-	align-items: center;
+	position: absolute;
+	top: 25%;
+	right: 0;
 }
 
-.footer .modal-btn::after {
-	position: absolute;
+.modal-btn.footr {
 	display: inline-block;
-
-	top: 30px;
-	left: 30px;
+	text-align: left;
+	padding: 10px 62px 10px 29px;
 }
 .icon-send {
+	position: absolute;
 	width: 24px;
 	height: 24px;
+	top: 13px;
+	right: 28px;
 }

@@ -236,7 +236,7 @@ footer .logo {
 	cursor: pointer;
 }
 
-/* open modal window */
+/* ======== open modal window ====== */
 .backdrop {
 	position: fixed;
 	top: 0;
@@ -275,6 +275,8 @@ footer .logo {
 
 	background-color: #fff;
 }
+
+/* ======== close modal window ====== */
 .close-btn {
 	position: absolute;
 	top: 8px;
@@ -291,11 +293,16 @@ footer .logo {
 .icon-close {
 	width: 11px;
 	height: 11px;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-close:hover {
 	fill: var(--accent-color);
 }
-.form-data {
+
+/* ============ form ============== */
+
+.form-title {
 	display: inline-block;
 	font-weight: bold;
 	font-size: 20px;
@@ -303,17 +310,13 @@ footer .logo {
 	letter-spacing: 0.03em;
 	width: 448px;
 	margin-bottom: 30px;
-
 	color: #212121;
 }
 
-/* form */
-
 .form-group {
-	/* outline: 1px solid red; */
 	display: flex;
 	flex-direction: column;
-
+	position: relative;
 	font-size: 12px;
 	line-height: 14px;
 
@@ -327,33 +330,61 @@ footer .logo {
 	margin-bottom: 4px;
 }
 .form-group input {
-	width: 448px;
-	height: 40px;
+	width: 100%;
 	margin: 0;
-	padding: 12px 15px;
+	padding: 12px 42px;
 	border: 1px solid rgba(33, 33, 33, 0.2);
-	/* box-sizing: border-box; */
 	border-radius: 4px;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .form-group .textarea:hover,
 .form-group .textarea:focus,
 .form-group input:focus,
 .form-group input:hover {
 	border-color: var(--accent-color);
 }
+.form-group input:hover + .icon-person,
+.form-group input:hover + .icon-phone,
+.form-group input:hover + .icon-email,
+.form-group input:focus + .icon-person,
+.form-group input:focus + .icon-phone,
+.form-group input:focus + .icon-email {
+	fill: var(--accent-color);
+}
+
 .icon-person {
+	position: absolute;
+	display: inline-block;
+	top: 50%;
+	left: 14px;
 	width: 12px;
 	height: 12px;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .icon-phone {
+	position: absolute;
+	display: inline-block;
+	top: 50%;
+	left: 14px;
 	width: 13px;
 	height: 13px;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-email {
+	position: absolute;
+	display: inline-block;
+	top: 50%;
+	left: 14px;
 	width: 15px;
 	height: 12px;
+	transition-duration: 250ms;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .icon-check {
 	width: 16px;
 	height: 15px;
